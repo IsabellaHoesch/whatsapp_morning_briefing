@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 
-def gather_weather(url_wetter):
+def gather_weather(url_wetter="https://www.wetter.com/deutschland/muenchen/DE0006515.html"):
     response = requests.get(url_wetter)
     soup = BeautifulSoup(response.text, "html.parser")
     when = ["Morgens", "Mittags", "Abends", "Nachts"]

@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-def gather_headlines(url_news):
+def gather_headlines(url_news="https://www.handelsblatt.com/ticker/"):
     response = requests.get(url_news)
     soup = BeautifulSoup(response.text, "html.parser")
     headlines = soup.find_all(attrs={"class": "vhb-headline"})
