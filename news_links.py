@@ -15,6 +15,7 @@ def gather_headlines(url_news="https://www.handelsblatt.com/ticker/"):
         count += 1
         if count == 10:
             break
-    return headlines_list
+    headlines_string='\n\n'.join(headlines_list)
+    return headlines_string
 
 
