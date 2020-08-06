@@ -10,7 +10,7 @@ from twilio.rest import Client
 #*************************************************************
 
 from_whatsapp_nr = conf.from_whatsapp_number  # Twilio sandbox number from which messages are sent
-contact_dir = conf.contact_directory[0]  # Contact directory to whom messages are being sent
+contact_dir = conf.contact_directory # Contact directory to whom messages are being sent
 
 #*************************************************************
 client = Client()
@@ -28,7 +28,6 @@ for key, value in contact_dir.items():
                            from_=from_whatsapp_nr,
                            to=value)
 # Funfact
-for key, value in contact_dir.items():
     client.messages.create(body=f.gather_funfact(),
                            from_=from_whatsapp_nr,
                            to=value)
