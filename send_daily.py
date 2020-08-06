@@ -16,7 +16,7 @@ contact_dir = conf.contact_directory # Contact directory to whom messages are be
 client = Client()
 for key, value in contact_dir.items():
 # Greeting Good-morning
-    client.messages.create(body="Guten Nachmittag {}!".format(key),
+    client.messages.create(body="Guten Morgen {}!".format(key),
                            from_=from_whatsapp_nr,
                            to=value)
 # News headlines
