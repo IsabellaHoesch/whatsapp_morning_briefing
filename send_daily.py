@@ -12,7 +12,7 @@ contact_dir = conf.contact_directory  # Recipients: Contact directory to whom me
 
 #*************************************************************
 if __name__ == "__main__":
-    client = Client()
+    client = Client() # this requires a authorization key and token that is retrived from twilio sandbox and stored as a path variable
     for key, value in contact_dir.items():
     # Greeting Good-morning
         client.messages.create(body="Guten Morgen {}!".format(key),
